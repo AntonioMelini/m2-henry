@@ -4,6 +4,14 @@
 
   .intro {
 
+    img{
+      margin-top: 1rem;
+      border-radius: 2rem;
+      @media (max-width: @phone) {
+        width: 100%;
+      }
+    }
+
     h2 {
       padding: 15px;
     }
@@ -24,6 +32,16 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+    .tecnologia, .ondas{
+      @media (max-width: @phone) {
+        display: none;
+      }
+    }
+    .auricular {
+      @media (max-width: @phone) {
+        width: 100%;
+      }
     }
   }
 
@@ -58,7 +76,22 @@
       }
 
       .btn {
+        background-color: @btn-bg-color;
+        color:white;
+        width: fit-content;
+        font-size: 1.5rem;
+        padding: 1.25rem;
+        border-radius: 1rem;
+
+        cursor: pointer;
+
+        &:hover{
+            color: white;
+            background-color: white solid 1px;
+            border: white;
+        }
       }
+     
     }
 
     .actual-img {
