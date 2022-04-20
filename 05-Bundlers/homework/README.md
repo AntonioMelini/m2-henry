@@ -235,7 +235,8 @@ La respuesta a esa pregunta en la sección anterior es si, por supuesto! Herrami
 
 ## Punto de Arranque
 
-En primer lugar para que vean la apllicación funcionando pueden, luego de ejecutar el `npm install` hacer un `npm start` e ingresar a la URL que les indica por consola para ver el whiteboard funcionando. A partir de ahora la idea será hacer unn refactor de la aplicación para aplicar lo visto en la clase de módulos pero sin modificar la funcionalidad en sí de la aplicación.
+En primer lugar para que vean la apllicación funcionando pueden, luego de ejecutar el `npm install` hacer un `npm start` e ingresar a la URL que les indica por consola para ver el whiteboard funcionando. A partir de ahora la i
+dea será hacer unn refactor de la aplicación para aplicar lo visto en la clase de módulos pero sin modificar la funcionalidad en sí de la aplicación.
 
 ### Entendiendo Nuestras Dependencias
 

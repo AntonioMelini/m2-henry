@@ -1,8 +1,10 @@
-(function () {
 
-  window.EventEmitter = EventEmitter;
 
+  
+  
   // our EventEmitter constructor function
+  //window.EventEmitter = require("/socket.io-client");
+
   function EventEmitter () {
     this.subscribers = {};
   }
@@ -43,4 +45,6 @@
 
   };
 
-})();
+  export {EventEmitter};
+
+
