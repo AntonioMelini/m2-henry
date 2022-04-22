@@ -1,0 +1,53 @@
+.SearchBar{
+    position: relative;
+    
+}
+.SearchBar > input{
+    width: 100%;
+    padding: 0.5rem 4rem 0.5rem 0.5rem;
+    box-sizing: border-box;
+    
+    
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 0.5rem;
+    
+
+    font-size: 1.5rem;
+
+}
+.SearchBar > button {
+    position: absolute;
+    
+    top: 0.6rem ;
+    right:0.6rem ;
+  
+    font-size: 1.5rem;
+    color: var(--btn-danger-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.25rem;
+
+    border-radius: 9999px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+
+    transition: 250ms;
+
+}
+
+.SearchBar > button:hover{
+    color: black;
+    background-color: var(--btn-danger-color);
+}
+
+@media screen and (min-width:576px){
+    .SearchBar{
+        width: 25rem;
+    }
+}
