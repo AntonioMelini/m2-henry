@@ -1,3 +1,12 @@
 #logoHenry {
   margin-right: 20px;
 }
+.nav-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: grey;
+  padding: 5px;
+}
+
+
