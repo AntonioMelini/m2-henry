@@ -1,14 +1,21 @@
 import React from 'react';
 import './Card.css';
+import {Link} from "react-router-dom"
 
 export default function Card ({min, max, name, img, onClose, id}) {
     return (
       <div className="card">
+        <Link to="/ciudad/:ciudadid">
         <div id="closeIcon" className="row">
             <button onClick={onClose} className="btn btn-sm btn-danger">X</button>
         </div>
+
+        </Link>
         <div className="card-body">
-          <h5 className="card-title">{name}</h5>
+        <Link to={`/ciudad/${id}`}>
+          <h5 className="card-title" >{name}</h5>
+        </Link>
+
           <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
               <p>Min</p>
