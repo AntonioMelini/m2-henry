@@ -2,7 +2,7 @@
 
 En este ejercicio vamos a crear una APP que utilice la API de [OMDB](http://www.omdbapi.com/). Vamos a crear nuestra app utilizando __REACT__ y __REDUX__.
 
-> Vamos a necesitar una APIKEY ya que la API de OMDB es paga. Usen `apikey=20dac387`
+> Vamos a necesitar una APIKEY ya que la API de OMDB es paga. Usen `apikey=e6aeb3c2`
 
 Con tu App podremos:
 

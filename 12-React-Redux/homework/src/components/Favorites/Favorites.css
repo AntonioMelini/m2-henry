@@ -1,3 +1,10 @@
 .cnt {
     padding-top: 10px;
 }
+.fav{
+       width: 30%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       padding: 0.5rem;
+ }

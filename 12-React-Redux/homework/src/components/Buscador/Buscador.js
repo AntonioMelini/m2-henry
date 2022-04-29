@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import './Buscador.css';
+import {getMovies,addMovieFavorite} from "../../actions"
+import store from "../../store";
 
 
 
@@ -11,12 +13,14 @@ export class Buscador extends Component {
     this.state = {
       title: ""
     };
+    this.handleSubmit=this.handleSubmit.bind(this);
   }
   handleChange(event) {
     this.setState({ title: event.target.value });
   }
   handleSubmit(event) {
     event.preventDefault();
+    this.props.getMovies(this.state.title)
   }
 
   render() {
@@ -24,7 +28,7 @@ export class Buscador extends Component {
     return (
       <div>
         <h2>Buscador</h2>
-        <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
+        <form className="form-container" onSubmit={this.handleSubmit}>
           <div>
             <label className="label" htmlFor="title">Película: </label>
             <input
@@ -35,14 +39,34 @@ export class Buscador extends Component {
               onChange={(e) => this.handleChange(e)}
             />
           </div>
-          <button type="submit">BUSCAR</button>
+          <button type="submit" >BUSCAR</button>
         </form>
         <ul>
-         {/* Aqui tienes que escribir tu codigo para mostrar la lista de peliculas */}
+         {  this.props.movies?.map(m=>(
+           <div className="fav" key={m.imdbID}>
+              <Link to={`/movie/${m.imdbID}`}>
+              <p >{m.Title}</p>
+              </Link>
+              <button onClick={()=> this.props.addMovieFavorite({Title:m.Title, imdbID:m.imdID}) }>FAV</button>
+           </div>
+             
+         ))
+        }
         </ul>
       </div>
     );
   }
 }
 
-export default Buscador;
+
+
+const mapStateToPromps= (state)=>{
+  return {
+    movies: state.moviesLoaded
+  }
+}
+
+export default connect(mapStateToPromps,{ getMovies, addMovieFavorite})(Buscador);
+
+
+
